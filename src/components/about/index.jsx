@@ -19,7 +19,7 @@ const AboutDetails = () => {
             leverages advanced machine learning algorithms to provide real-time analytics,
             predictive modeling, and automated trading strategies. Built with a
             responsive-first approach, our interface adapts flawlessly across all devices,
-            ensuring a premium user experience whether you're monitoring markets on your
+            ensuring a premium user experience whether you are monitoring markets on your
             desktop or trading on the go. Experience the future of decentralized AI,
             powered by the speed and efficiency of the XRP network.
           </p>

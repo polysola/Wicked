@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Image as ImageIcon, Maximize2, Minimize2 } from 'lucide-react';
+import Image from 'next/image';
 
 const ChatMessage = ({ message, type, isUser, imageUrl }) => {
     return (
@@ -13,16 +14,18 @@ const ChatMessage = ({ message, type, isUser, imageUrl }) => {
             )}
             <div
                 className={`max-w-[80%] rounded-2xl px-4 py-2 ${isUser
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-gray-800 text-gray-100'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                    : 'bg-gray-800 text-gray-100'
                     }`}
             >
                 {type === 'image' ? (
                     <div className="space-y-2">
                         <p className="text-sm mb-2">{message}</p>
-                        <img
+                        <Image
                             src={imageUrl}
                             alt={message}
+                            width={500}
+                            height={300}
                             className="rounded-lg max-w-full h-auto"
                             loading="lazy"
                         />
@@ -110,8 +113,8 @@ const ChatInterface = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         className={`fixed z-40 transition-all duration-300 ${isExpanded
-                                ? 'top-0 right-0 w-full h-full'
-                                : 'bottom-16 right-4 w-[calc(100%-2rem)] sm:w-96 h-[500px] sm:bottom-24 sm:right-6'
+                            ? 'top-0 right-0 w-full h-full'
+                            : 'bottom-16 right-4 w-[calc(100%-2rem)] sm:w-96 h-[500px] sm:bottom-24 sm:right-6'
                             }`}
                     >
                         <div className="h-full bg-gray-900/95 backdrop-blur-xl rounded-2xl shadow-2xl flex flex-col border border-gray-800/50 overflow-hidden">
@@ -188,8 +191,8 @@ const ChatInterface = () => {
                                         type="button"
                                         onClick={() => setIsImageMode(!isImageMode)}
                                         className={`p-2 rounded-xl transition-colors ${isImageMode
-                                                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                                                : 'bg-gray-800 text-gray-400'
+                                            ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                                            : 'bg-gray-800 text-gray-400'
                                             }`}
                                     >
                                         <ImageIcon size={20} />
