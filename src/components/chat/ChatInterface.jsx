@@ -144,7 +144,7 @@ const ChatInterface = () => {
                                 {messages.length === 0 && (
                                     <div className="text-center text-gray-500 py-8">
                                         <Bot size={40} className="mx-auto mb-4 text-purple-500" />
-                                        <p className="text-sm">Hi! I'm XWizard AI. How can I help you today?</p>
+                                        <p className="text-sm">Hi! I&apos;m XWizard AI. How can I help you today?</p>
                                     </div>
                                 )}
                                 {messages.map((msg, index) => (
