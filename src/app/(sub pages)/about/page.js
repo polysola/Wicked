@@ -3,7 +3,7 @@ import bg from "../../../../public/background/about-background.png";
 import RenderModel from "@/components/RenderModel";
 import AboutDetails from "@/components/about";
 import dynamic from "next/dynamic";
-
+import ChatInterface from "@/components/chat/ChatInterface";
 const HatModel = dynamic(() => import("@/components/models/HatModel"), {
   ssr: false,
 });
@@ -15,6 +15,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
+      <ChatInterface />
       <Image
         src={bg}
         priority
