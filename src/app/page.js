@@ -5,6 +5,7 @@ import RenderModel from "@/components/RenderModel";
 import Navigation from "@/components/navigation";
 
 import dynamic from "next/dynamic";
+import ChatInterface from "@/components/chat/ChatInterface";
 const Wizard = dynamic(() => import("@/components/models/Wizard"), {
   ssr: false,
 });
@@ -20,7 +21,9 @@ export default function Home() {
         fill
         className="-z-50 w-full h-full object-cover object-center opacity-50"
       />
-
+      <div className="">
+        <ChatInterface />
+      </div>
       <div className="w-full h-screen">
         <Navigation />
         <RenderModel>

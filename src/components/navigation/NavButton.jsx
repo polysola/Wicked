@@ -1,11 +1,13 @@
 import {
   Github,
-  Home,
+
   Linkedin,
-  NotebookText,
+
   Palette,
   Phone,
   Twitter,
+  Send,
+  ShoppingCart,
   User,
 } from "lucide-react";
 import Link from "next/link";
@@ -17,7 +19,7 @@ import { motion } from "framer-motion";
 const getIcon = (icon) => {
   switch (icon) {
     case "home":
-      return <Home className="w-full h-auto" strokeWidth={1.5} />;
+      return <ShoppingCart className="w-full h-auto" strokeWidth={1.5} />;
     case "about":
       return <User className="w-full h-auto" strokeWidth={1.5} />;
     case "projects":
@@ -31,7 +33,7 @@ const getIcon = (icon) => {
     case "twitter":
       return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
     case "resume":
-      return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
+      return <Send className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;

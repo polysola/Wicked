@@ -90,34 +90,37 @@ export const projectsData = [
 ];
 
 export const BtnList = [
-  { label: "Home", link: "/", icon: "home", newTab: false },
+  {
+    label: "Buy Now",
+    link: "https://firstledger.net",
+    icon: "home",
+    newTab: true,
+  },
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",
-    link: "https://www.github.com/codebucks27",
+    link: "https://www.github.com",
     icon: "github",
     newTab: true,
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/codebucks",
+    link: "https://www.linkedin.com",
     icon: "linkedin",
     newTab: true,
   },
   {
     label: "X",
-    link: "https://www.x.com/code_bucks",
+    link: "https://x.com/XWizardAI_XRPL",
     icon: "twitter",
     newTab: true,
   },
   {
-    label: "Resume",
-    link: "/resume.pdf",
+    label: "Telegram",
+    link: "https://t.me/XWizardAI_Portal",
     icon: "resume",
     newTab: true,
   },
 ];
-
-
